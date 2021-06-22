@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import ilustrationImg from '../assets/images/illustration.svg';
@@ -7,11 +6,11 @@ import logoImg from '../assets/images/logo.svg';
 import '../styles/auth.scss';
 import '../styles/button.scss';
 
-import { AuthContext } from '../App';
 import { Button } from '../Components/button';
+import { useAuthHook } from '../hooks/useAuth';
 
 export const NewRoom = () => {
-  const { User } = useContext(AuthContext);
+  const { User } = useAuthHook();
   console.log(User);
 
   return (
