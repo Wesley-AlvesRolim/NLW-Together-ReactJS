@@ -10,7 +10,7 @@ import './styles/global.scss';
 
 type AuthContextType = {
   User: User | undefined;
-  signInWithGoogle: () => void;
+  signInWithGoogle: () => Promise<void>;
 };
 
 type User = {
@@ -24,23 +24,23 @@ export const AuthContext = createContext({} as AuthContextType);
 function App() {
   const [User, SetUser] = useState<User>();
 
-  function signInWithGoogle() {
+  async function signInWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
-    authFirebase.signInWithPopup(provider).then(result => {
-      if (result.user) {
-        const { displayName, photoURL, uid } = result.user;
+    const result = await authFirebase.signInWithPopup(provider);
 
-        if (!displayName || !photoURL) {
-          throw new Error('Missing information from Google Account.');
-        }
+    if (result.user) {
+      const { displayName, photoURL, uid } = result.user;
 
-        SetUser({
-          id: uid,
-          name: displayName,
-          avatar: photoURL,
-        });
+      if (!displayName || !photoURL) {
+        throw new Error('Missing information from Google Account.');
       }
-    });
+
+      SetUser({
+        id: uid,
+        name: displayName,
+        avatar: photoURL,
+      });
+    }
   }
 
   return (
