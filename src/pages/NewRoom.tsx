@@ -11,7 +11,6 @@ import { useAuthHook } from '../hooks/useAuth';
 
 export const NewRoom = () => {
   const { User } = useAuthHook();
-  console.log(User);
 
   return (
     <div id='page-auth'>
