@@ -1,38 +1,38 @@
-#page-room{
-    header{
+#page-room {
+    header {
         padding: 24px;
         box-shadow: 0 1px 5px #e2e2e2;
     }
 
-    .header__content{
+    .header__content {
         max-width: 1120px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
-        >img{
+
+        > img {
             max-height: 45px;
         }
     }
 
-    main{
+    main {
         max-width: 800px;
         margin: 0 auto;
         padding: 5px;
 
-        .room-title{
+        .room-title {
             margin: 2rem 0 1.5rem;
             display: flex;
             align-items: center;
 
-            h1{
-                font-family: 'Poppins',sans-serif;
+            h1 {
+                font-family: "Poppins", sans-serif;
                 font-size: 1.5rem;
                 color: #29293e;
             }
 
-            span{
+            span {
                 margin-left: 16px;
                 padding: 8px 14px;
                 border-radius: 50rem;
@@ -43,8 +43,8 @@
             }
         }
 
-        form{
-            textarea{
+        form {
+            textarea {
                 min-width: 130px;
                 width: 100%;
                 padding: 1rem;
@@ -55,29 +55,49 @@
                 resize: vertical;
             }
 
-            footer{
+            footer {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 margin-top: 16px;
 
-                span{
-                    font-size: .9rem;
-                    color: #737383;
-                    font-weight: 500;
+                .user-info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 16px;
+
+                    img {
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 50%;
+                    }
+
+                    > span {
+                        margin-left: 8px;
+                        font-size: 0.9rem;
+                        color: #29292e;
+                        font-weight: 500;
+                    }
                 }
-                
-                button:not(button.button){
+
+                span {
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                    color: #737383;
+                }
+
+                button:not(button.button) {
                     border: none;
                     background: transparent;
                     color: #835afd;
-                    font-size: .9rem;
+                    font-size: 0.9rem;
                     font-weight: 500;
                     text-decoration: underline;
                     cursor: pointer;
-                    transition: .25s;
+                    transition: 0.25s;
 
-                    &:hover{
+                    &:hover {
                         text-decoration: none;
                         letter-spacing: 1px;
                         text-shadow: 0 0 2px #737383;
