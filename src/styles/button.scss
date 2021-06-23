@@ -1,6 +1,5 @@
 .button{
     height: 56px;
-    margin-top: 64px;
     border: 0;
     padding: 0 32px;
     border-radius: 8px;
@@ -12,11 +11,12 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: filter .25s ease, transform .25s ease;
+    transition: .25s ease;
 
     &:not(:disabled):hover{
         filter: brightness(0.9);
-        transform: scale(1.1) translateY(-5px);
+        transform: scale(1.05) translateY(-5px);
+        box-shadow: 0 5px 5px #606060;
     }
 
     &:disabled{
