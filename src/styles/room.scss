@@ -1,0 +1,89 @@
+#page-room{
+    header{
+        padding: 24px;
+        box-shadow: 0 1px 5px #e2e2e2;
+    }
+
+    .header__content{
+        max-width: 1120px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        >img{
+            max-height: 45px;
+        }
+    }
+
+    main{
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 5px;
+
+        .room-title{
+            margin: 2rem 0 1.5rem;
+            display: flex;
+            align-items: center;
+
+            h1{
+                font-family: 'Poppins',sans-serif;
+                font-size: 1.5rem;
+                color: #29293e;
+            }
+
+            span{
+                margin-left: 16px;
+                padding: 8px 14px;
+                border-radius: 50rem;
+                background-color: #e559f9;
+                color: #fff;
+                font-weight: 500;
+                font-size: 0.9rem;
+            }
+        }
+
+        form{
+            textarea{
+                min-width: 130px;
+                width: 100%;
+                padding: 1rem;
+                border: none;
+                border-radius: 8px;
+                background-color: #fefefe;
+                box-shadow: 0 2 12px #000000dd;
+                resize: vertical;
+            }
+
+            footer{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 16px;
+
+                span{
+                    font-size: .9rem;
+                    color: #737383;
+                    font-weight: 500;
+                }
+                
+                button:not(button.button){
+                    border: none;
+                    background: transparent;
+                    color: #835afd;
+                    font-size: .9rem;
+                    font-weight: 500;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    transition: .25s;
+
+                    &:hover{
+                        text-decoration: none;
+                        letter-spacing: 1px;
+                        text-shadow: 0 0 2px #737383;
+                    }
+                }
+            }
+        }
+    }
+}
