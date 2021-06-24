@@ -15,9 +15,7 @@ export const Home = () => {
   const { User, signInWithGoogle } = useAuthHook();
 
   async function HandleCreateRoom() {
-    if (!User) {
-      await signInWithGoogle();
-    }
+    if (!User) await signInWithGoogle();
     history.push('/rooms/new');
   }
 
@@ -32,6 +30,11 @@ export const Home = () => {
     const roomRef = await DbFirebase.ref('rooms/' + RoomCode).get();
     if (!roomRef.exists()) {
       alert('Room does exists!');
+      return;
+    }
+
+    if (roomRef.val().endedAt) {
+      alert('Room already closed!');
       return;
     }
     history.push('rooms/' + RoomCode);
