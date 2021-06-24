@@ -1,0 +1,46 @@
+.question {
+    padding: 24px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 12px #0000000d;
+
+    & + .question {
+        margin-top: 8px;
+    }
+
+    p {
+        color: #29292e;
+    }
+
+    footer {
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .user-info {
+            margin-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            img {
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+            }
+
+            > span {
+                margin-left: 8px;
+                font-size: 0.9rem;
+                color: #737380;
+            }
+        }
+
+        span {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #737383;
+        }
+    }
+}
