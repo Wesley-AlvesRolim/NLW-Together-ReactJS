@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 import LogoImg from '../assets/images/logo.svg';
 import DeleteImg from '../assets/images/delete.svg';
@@ -15,6 +15,7 @@ type paramsType = {
 };
 
 export const AdminRoom = () => {
+  const history = useHistory();
   const params = useParams<paramsType>();
   const roomId = params.id;
   const { Title, questions } = useRoom(roomId);
@@ -30,6 +31,19 @@ export const AdminRoom = () => {
     }
   }
 
+  async function handleCloseRoom() {
+    const isToCloseRoom: boolean = window.confirm(
+      'Tem certeza que você quer encerrar essa sala?',
+    );
+    if (isToCloseRoom) {
+      await DbFirebase.ref('rooms/' + roomId).update({
+        endedAt: new Date(),
+      });
+
+      history.push('/');
+    }
+  }
+
   return (
     <div id='page-room'>
       <header>
@@ -39,7 +53,9 @@ export const AdminRoom = () => {
             <div className='code-room'>
               <RoomCode code={roomId} />
             </div>
-            <Button isOutlined>Encerrar sala</Button>
+            <Button isOutlined onClick={handleCloseRoom}>
+              Encerrar sala
+            </Button>
           </div>
         </div>
       </header>
