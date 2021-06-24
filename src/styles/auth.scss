@@ -1,9 +1,9 @@
-#page-auth{
+#page-auth {
     display: flex;
     align-items: stretch;
     height: 100vh;
-    
-    aside{
+
+    aside {
         flex: 7;
         background-color: #835afd;
         display: flex;
@@ -11,58 +11,58 @@
         justify-content: center;
         padding: 120px 88px;
 
-        img{
+        img {
             max-width: 320px;
         }
-        
-        strong{
-            font: 700 1.8rem 'Poppins', sans-serif;
+
+        strong {
+            font: 700 1.8rem "Poppins", sans-serif;
             line-height: 2.5rem;
             margin-top: 1rem;
         }
-        
-        p{
+
+        p {
             font-size: 1.5rem;
             line-height: 2rem;
             margin-top: 1rem;
             color: #f8f8f8;
         }
     }
-    
-    @media (max-width:768px){
-        aside{
+
+    @media (max-width: 768px) {
+        aside {
             display: none;
         }
     }
-    
-    main{
+
+    main {
         flex: 8;
         padding: 0 32px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    .main-content{
+
+    .main-content {
         display: flex;
         flex-direction: column;
         align-items: stretch;
         width: 100%;
         max-width: 320px;
         text-align: center;
-        
-        >img{
+
+        > img {
             align-self: center;
             pointer-events: none;
         }
-        
-        h2{
+
+        h2 {
             font-size: 1.5rem;
-            font-family: 'Poppins', sans-serif;
+            font-family: "Poppins", sans-serif;
             margin: 34px 0 24px;
         }
-        
-        .create-room{
+
+        .create-room {
             height: 56px;
             margin-top: 64px;
             border: 0;
@@ -71,34 +71,34 @@
             font-weight: 500;
             color: #fff;
             background-color: #ea4333;
-            
+
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            transition: .25s ease;
+            transition: 0.25s ease;
 
-            &:hover{
-                filter: brightness(0.9);
+            &:hover {
+                filter: brightness(0.95);
                 transform: translateY(-5px) scale(0.97);
-                box-shadow: 0 1px 5px #606060;
+                box-shadow: 0 1px 5px #6060604d;
             }
-            
-            img{
+
+            img {
                 margin-right: 8px;
             }
         }
 
-        .separator{
-            font-size: .9rem;
+        .separator {
+            font-size: 0.9rem;
             color: #a8a8b3;
 
             margin: 32px 0;
             display: flex;
             align-content: center;
 
-            &::before{
-                content: '';
+            &::before {
+                content: "";
                 position: relative;
                 top: 7px;
                 flex: 1;
@@ -106,9 +106,9 @@
                 background-color: #a8a8b3;
                 margin-right: 16px;
             }
-            
-            &::after{
-                content: '';
+
+            &::after {
+                content: "";
                 position: relative;
                 top: 7px;
                 flex: 1;
@@ -117,36 +117,36 @@
                 margin-left: 16px;
             }
         }
-        
-        form{
 
-            input{
+        form {
+            input {
                 height: 58px;
                 padding: 0 1rem;
                 background-color: #fff;
                 border: 1px solid #a8a8b3;
                 border-radius: 8px;
             }
-            
-            button{
+
+            button {
                 margin-top: 1rem;
             }
-            
-            button, input{
+
+            button,
+            input {
                 width: 100%;
             }
         }
-        
-        p{
-            font-size: .9rem;
+
+        p {
+            font-size: 0.9rem;
             color: #737380;
             margin-top: 16px;
-            
-            a{
+
+            a {
                 color: #e559f8;
                 margin-left: 5px;
-                transition: .25s ease-in;
-                &:hover{
+                transition: 0.25s ease-in;
+                &:hover {
                     text-decoration: none;
                     letter-spacing: 1px;
                     filter: brightness(0.75);

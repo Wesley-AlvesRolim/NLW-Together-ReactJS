@@ -1,4 +1,4 @@
-.button{
+.button {
     height: 56px;
     border: 0;
     padding: 0 32px;
@@ -6,26 +6,26 @@
     font-weight: 500;
     color: #fff;
     background-color: #835af3;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: .25s ease;
+    transition: 0.25s ease;
 
-    &:not(:disabled):hover{
+    &:not(:disabled):hover {
         filter: brightness(0.9);
         transform: scale(1.05) translateY(-5px);
-        box-shadow: 0 5px 5px #606060;
+        box-shadow: 0 5px 5px #6060604d;
     }
 
-    &:disabled{
+    &:disabled {
         cursor: not-allowed;
-        opacity: .8;
+        opacity: 0.8;
     }
 
-    p{
-        font-size: .9rem;
+    p {
+        font-size: 0.9rem;
         color: #737380;
     }
 }
