@@ -26,7 +26,7 @@ export const NewRoom = () => {
       title: newRoom,
       authorId: User?.id,
     });
-    history.push(`/rooms/${firebaseRoom.key}`);
+    history.push(`/admin/rooms/${firebaseRoom.key}`);
   }
 
   return (
