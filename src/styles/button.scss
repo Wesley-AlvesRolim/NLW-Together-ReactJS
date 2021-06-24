@@ -24,6 +24,17 @@
         opacity: 0.8;
     }
 
+    &.outlined {
+        border: 1px solid #835afd;
+        background-color: #fff;
+        color: #835afd;
+        &:hover {
+            filter: none;
+            transform: translateY(-5px);
+            box-shadow: 0 1px 10px #6060604d;
+        }
+    }
+
     p {
         font-size: 0.9rem;
         color: #737380;
