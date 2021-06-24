@@ -36,11 +36,40 @@
                 color: #737380;
             }
         }
+        div {
+            > button {
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                &.like-button {
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 8px;
+                    color: #737380;
+                    transition: 0.25s;
 
-        span {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #737383;
+                    &:hover {
+                        filter: brightness(0.75);
+                        transform: scale(1.01);
+                    }
+
+                    &.liked {
+                        span {
+                            color: #8353fd !important;
+                        }
+
+                        svg path {
+                            stroke: #8353fd;
+                        }
+                    }
+                }
+            }
         }
+    }
+
+    span {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #737383;
     }
 }
