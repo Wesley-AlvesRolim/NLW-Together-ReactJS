@@ -22,6 +22,22 @@ export const AdminRoom = () => {
   const roomId = params.id;
   const { Title, questions } = useRoom(roomId);
 
+  async function handleQuestionAsAnswered(questionId: string) {
+    await DbFirebase.ref('rooms/' + roomId + '/questions/' + questionId).update(
+      {
+        isAnswered: true,
+      },
+    );
+  }
+
+  async function handleHighlightQuestion(questionId: string) {
+    await DbFirebase.ref('rooms/' + roomId + '/questions/' + questionId).update(
+      {
+        isHighLighted: true,
+      },
+    );
+  }
+
   async function handleDeleteQuestion(questionId: string) {
     const isToRemove: boolean = window.confirm(
       'Tem certeza que você quer apagar essa pergunta?',
