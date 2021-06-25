@@ -95,6 +95,8 @@ export const AdminRoom = () => {
                 key={question.id}
                 content={question.content}
                 author={question.author}
+                isHighLighted={question.isHighLighted}
+                isAnswered={question.isAnswered}
               >
                 <button
                   onClick={() => {
