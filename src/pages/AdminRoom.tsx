@@ -2,6 +2,8 @@ import { useHistory, useParams, Link } from 'react-router-dom';
 
 import LogoImg from '../assets/images/logo.svg';
 import DeleteImg from '../assets/images/delete.svg';
+import CheckImg from '../assets/images/check.svg';
+import AnswerImg from '../assets/images/answer.svg';
 import '../styles/room.scss';
 
 import { Button } from '../Components/button';
@@ -78,6 +80,25 @@ export const AdminRoom = () => {
                 content={question.content}
                 author={question.author}
               >
+                <button
+                  onClick={() => {
+                    handleQuestionAsAnswered(question.id);
+                  }}
+                >
+                  <img src={CheckImg} alt='Dar destaque a essa pergunta.' />
+                </button>
+
+                <button
+                  onClick={() => {
+                    handleHighlightQuestion(question.id);
+                  }}
+                >
+                  <img
+                    src={AnswerImg}
+                    alt='Marcar essa pergunta com respondida.'
+                  />
+                </button>
+
                 <button
                   onClick={() => {
                     handleDeleteQuestion(question.id);
