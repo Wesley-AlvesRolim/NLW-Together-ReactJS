@@ -7,12 +7,18 @@ type QuestionsProps = {
     avatar: string;
   };
   content: string;
+  isHighLighted?: boolean;
+  isAnswered?: boolean;
   children?: ReactNode;
 };
 
 export const Question = (props: QuestionsProps) => {
   return (
-    <div className='question'>
+    <div
+      className={`question ${props.isAnswered ? 'answered' : ''} ${
+        props.isHighLighted && !props.isAnswered ? 'highLighted' : ''
+      }`}
+    >
       <p>{props.content}</p>
       <footer>
         <div className='user-info'>
