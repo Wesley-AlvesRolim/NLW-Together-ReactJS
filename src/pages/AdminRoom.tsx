@@ -1,4 +1,4 @@
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory, useParams, Link } from 'react-router-dom';
 
 import LogoImg from '../assets/images/logo.svg';
 import DeleteImg from '../assets/images/delete.svg';
@@ -48,7 +48,9 @@ export const AdminRoom = () => {
     <div id='page-room'>
       <header>
         <div className='header__content'>
-          <img src={LogoImg} alt='LetMeAsk' />
+          <Link to='/'>
+            <img src={LogoImg} alt='LetMeAsk' />
+          </Link>
           <div>
             <div className='code-room'>
               <RoomCode code={roomId} />
