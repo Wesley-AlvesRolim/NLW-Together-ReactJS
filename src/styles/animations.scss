@@ -1,0 +1,74 @@
+#page-auth {
+    aside {
+        img {
+            animation: showSmoothImage 1s ease backwards;
+        }
+        img ~ strong,
+        img ~ p {
+            animation: showSmoothText 1s ease backwards;
+        }
+        img ~ p {
+            animation-delay: 0.25s;
+        }
+    }
+
+    .main-content {
+        > img {
+            animation: showSmoothMainContent 1s ease-in-out backwards;
+            animation-delay: 0.25s;
+        }
+
+        .create-room {
+            animation: showSmoothMainContent 1s ease-in-out backwards;
+            animation-delay: 0.5s;
+        }
+
+        .separator {
+            animation: showSmoothMainContent 1s ease-in-out backwards;
+            animation-delay: 0.75s;
+        }
+
+        form > input {
+            animation: showSmoothMainContent 1s ease-in-out backwards;
+            animation-delay: 1s;
+        }
+
+        form > button {
+            animation: showSmoothMainContent 1s ease-in-out backwards;
+            animation-delay: 1.25s;
+        }
+    }
+}
+
+@keyframes showSmoothImage {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes showSmoothText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes showSmoothMainContent {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
