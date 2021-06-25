@@ -6,6 +6,7 @@ import { Room } from './pages/Room';
 import { AdminRoom } from './pages/AdminRoom';
 
 import './styles/global.scss';
+import './styles/animations.scss';
 import { AuthContextProvider } from './contexts/AuthContext';
 
 function App() {
