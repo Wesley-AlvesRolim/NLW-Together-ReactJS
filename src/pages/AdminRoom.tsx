@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { useHistory, useParams, Link } from 'react-router-dom';
 
 import LogoImg from '../assets/images/logo.svg';
@@ -98,32 +99,36 @@ export const AdminRoom = () => {
                 isHighLighted={question.isHighLighted}
                 isAnswered={question.isAnswered}
               >
-                <button
-                  onClick={() => {
-                    handleQuestionAsAnswered(question.id);
-                  }}
-                >
-                  <img src={CheckImg} alt='Dar destaque a essa pergunta.' />
-                </button>
+                {!question.isAnswered && (
+                  <Fragment>
+                    <button
+                      onClick={() => {
+                        handleQuestionAsAnswered(question.id);
+                      }}
+                    >
+                      <img src={CheckImg} alt='Dar destaque a essa pergunta.' />
+                    </button>
 
-                <button
-                  onClick={() => {
-                    handleHighlightQuestion(question.id);
-                  }}
-                >
-                  <img
-                    src={AnswerImg}
-                    alt='Marcar essa pergunta com respondida.'
-                  />
-                </button>
+                    <button
+                      onClick={() => {
+                        handleHighlightQuestion(question.id);
+                      }}
+                    >
+                      <img
+                        src={AnswerImg}
+                        alt='Marcar essa pergunta com respondida.'
+                      />
+                    </button>
 
-                <button
-                  onClick={() => {
-                    handleDeleteQuestion(question.id);
-                  }}
-                >
-                  <img src={DeleteImg} alt='Apague essa pergunta.' />
-                </button>
+                    <button
+                      onClick={() => {
+                        handleDeleteQuestion(question.id);
+                      }}
+                    >
+                      <img src={DeleteImg} alt='Apague essa pergunta.' />
+                    </button>
+                  </Fragment>
+                )}
               </Question>
             );
           })}
