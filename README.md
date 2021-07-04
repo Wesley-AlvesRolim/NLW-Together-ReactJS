@@ -14,7 +14,7 @@
 
 <br>
 
-### This is a project was developed in NLW together and teach by Diego Fernandes.
+### This is a project developed in NLW together and teach by Diego Fernandes.
 
 <br>
 
